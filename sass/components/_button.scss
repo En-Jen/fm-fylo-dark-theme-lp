@@ -1,0 +1,19 @@
+.btn {
+    text-decoration: none;
+    font-size: $default-font-size;
+
+    &--header {
+        width: 25rem;
+    }
+
+    &--large {
+        color: $color-white;
+        background-image: linear-gradient(to right, $color-cyan, $color-blue);
+        padding: 1.7rem;
+        border-radius: 50px;
+    }
+
+    &--small {
+
+    }
+}

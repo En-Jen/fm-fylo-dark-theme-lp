@@ -2,16 +2,39 @@
     text-decoration: none;
     font-size: $default-font-size;
 
-    &--header {
-        width: 25rem;
-    }
-
     &--large {
         font-family: $font-secondary;
         color: $color-white;
         background-image: linear-gradient(to right, $color-cyan, $color-blue);
-        padding: 1.7rem;
+        padding: 1.5rem;
         border-radius: 50px;
+        transition: all .2s;
+
+        //Styles for the <button> element
+        border: none;
+        cursor: pointer;
+
+        //Raise button up on hover
+        &:hover,
+        &:focus {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba($color-black,.4);
+            outline: none; //to get rid of outline on <button> element
+        }
+    
+        //Have button appear to be pushed down when clicked or focused
+        &:active {
+            transform: translateY(-1px);
+            box-shadow: 0 .5rem 1rem rgba($color-black,.4);
+        }
+    }
+
+    &--header {
+        width: 25rem;
+    }
+
+    &--form {
+        width: 19rem
     }
 
     &--small {

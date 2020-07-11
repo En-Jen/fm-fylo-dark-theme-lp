@@ -1,0 +1,85 @@
+.cta {
+    background-color: $color-dark-blue-intro;
+    text-align: center;
+    padding: 3.5rem;
+    width: 85rem;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px rgba($color-black, .1);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 40%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading {
+        font-family: $font-secondary;
+        font-size: 3rem;
+        margin-bottom: 1.8rem;
+    }
+
+    &__description {
+        font-size: $default-font-size;
+        width: 60rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.form {
+    width: 90%;
+    display: flex;
+    align-items: flex-start;
+
+    &__group {
+        margin-right: 2rem;
+        flex: 1;
+    }
+
+    &__input {
+        font-size: 1.3rem;
+        padding: 1.5rem 3rem 1.2rem 3rem;
+        border-radius: 50px;
+        background-color: $color-white;
+        border: none;
+        display: block;
+        width: 100%;
+        border-bottom: 3px solid transparent; //So that when it gets focused, it doesn't look like the input's height is increasing by 3px
+        transition: all .5s;
+
+        //Styles on focus and valid email entry
+        &:focus {
+            background-color: $color-white;
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            border-bottom: 3px solid $color-cyan;
+        }
+
+        //Style for invalid email entry
+        &:focus:invalid {
+            border-bottom: 3px solid $color-pink;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey;
+        }
+    }
+
+    &__label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        display: block;
+        transition: all .3s;
+        text-align: left;
+    }
+
+    // Makes the label invisible before the user types in the input box
+    &__input:placeholder-shown + &__label {
+        opacity: 0; //opacity is a property that can be animated
+        visibility: hidden; //removes the label from the page
+        transform: translateY(-4rem);
+    }
+}

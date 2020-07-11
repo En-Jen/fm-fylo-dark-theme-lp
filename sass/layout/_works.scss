@@ -1,9 +1,8 @@
 .works {
+    margin-bottom: 16rem;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
-    //grid-template-columns: repeat(2, minmax(25rem, 60rem));
-    //grid-template-columns: minmax(25rem, 55rem) minmax(25rem, 45rem);
     justify-content: center;
     align-items: center;
     grid-gap: 5rem;
@@ -22,7 +21,7 @@
     &__heading {
         font-family: $font-secondary;
         font-size: 3.5rem;
-        width: 65%;
+        width: 60%;
         line-height: 1.2;
         margin-bottom: 2rem;
     }
@@ -30,6 +29,6 @@
     &__description {
         font-size: $default-font-size;
         margin-bottom: 1.5rem;
-        width: 80%;
+        width: 75%;
     }
 }

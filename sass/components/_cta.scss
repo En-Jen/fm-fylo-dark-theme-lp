@@ -14,15 +14,24 @@
     flex-direction: column;
     align-items: center;
 
+    @media only screen and (max-width: $bp-900) {
+        width: 90%;
+        transform: translate(-50%, 50%);
+    }
+
     &__heading {
         font-family: $font-secondary;
         font-size: 3rem;
         margin-bottom: 1.8rem;
+
+        @media only screen and (max-width: $bp-600) {
+            font-size: 2.2rem;
+        }
     }
 
     &__description {
         font-size: $default-font-size;
-        width: 60rem;
+        max-width: 60rem;
         margin-bottom: 3rem;
     }
 }
@@ -32,9 +41,19 @@
     display: flex;
     align-items: flex-start;
 
+    @media only screen and (max-width: $bp-600) {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     &__group {
         margin-right: 2rem;
         flex: 1;
+
+        @media only screen and (max-width: $bp-600) {
+            margin-right: 0;
+        }
     }
 
     &__input {
@@ -69,8 +88,7 @@
     &__label {
         font-size: 1.2rem;
         font-weight: 700;
-        margin-left: 2rem;
-        margin-top: .7rem;
+        margin: .7rem 0 1.2rem 2rem;
         display: block;
         transition: all .3s;
         text-align: left;

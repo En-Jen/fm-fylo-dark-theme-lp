@@ -2,6 +2,10 @@
     background-color: $color-dark-blue-footer;
     padding: 20rem 6rem 3rem 6rem;
 
+    @media only screen and (max-width: $bp-600) {
+        padding: 28rem 5rem 3rem 5rem;
+    }
+
     &__logo {
         display: block;
     }
@@ -14,10 +18,21 @@
         grid-template-columns: minmax(min-content, 35%) minmax(min-content, 20%) minmax(min-content, 10%) minmax(min-content, 12%) max-content;
         grid-gap: 3rem;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-900) {
+            padding-bottom: 5rem;
+            grid-template-columns: minmax(min-content, 40%) minmax(min-content, 27%) minmax(min-content, 15%) minmax(min-content, 12%);
+            grid-template-rows: repeat(2, auto) 10rem;
+        }
+
+        @media only screen and (max-width: $bp-600) {
+            grid-template-columns: minmax(min-content, 1fr);
+            grid-template-rows: 8rem auto 10rem 15rem 12rem;
+        }
     }
 
     &__logo-link {
-        
+        grid-column: 1 / -1;
     }
 
     &__location {
@@ -34,26 +49,22 @@
 
     &__location-text {
         width: 75%;
+
+        @media only screen and (max-width: $bp-900) {
+            width: 90%;
+        }
     }
 
     &__contact {
-        grid-row: 2 / span 1;
-
         display: grid;
         grid-template-columns: min-content auto;
         grid-template-rows: repeat(2, min-content);
         grid-column-gap: 2rem;
         grid-row-gap: 1.3rem;
         align-items: center;
-
-        &-icon {
-
-        }
     }
 
     &__nav-1 {
-        grid-row: 2 / span 1;
-
         display: grid;
         grid-template-columns: max-content;
         grid-template-rows: repeat(4, min-content);
@@ -61,8 +72,6 @@
     }
 
     &__nav-2 {
-        grid-row: 2 / span 1;
-
         display: grid;
         grid-template-columns: max-content;
         grid-template-rows: repeat(3, min-content);
@@ -84,11 +93,20 @@
     }
 
     &__social {
-        grid-row: 2 / span 1;
-
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-gap: 1rem;
+
+        @media only screen and (max-width: $bp-900) {
+            grid-row: 3 / span 1;
+            grid-column: 1 / -1;
+            justify-self: center;
+            align-self: end;
+        }
+
+        @media only screen and (max-width: $bp-600) {
+            grid-row: 6 / span 1;
+        }
     }
 
     &__social-link {
@@ -98,7 +116,7 @@
         border: 1px solid $color-white;
         border-radius: 50%;
         color: $color-white;
-        font-size: 1.4rem;
+        font-size: 14px;
         transition: background-color .3s;
 
         display: flex;
@@ -116,5 +134,40 @@
         i {
             transition: color .3s; 
         }     
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    &__link {
+        text-decoration: none;
+        color: $color-blue;
+        position: relative;
+        transition: color .3s;
+    }
+
+    &__link:hover {
+        color: $color-cyan;
+    }
+
+    //hidden line under links
+    &__link::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: $color-blue;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        transform: scaleX(0);
+        transition: all .3s;
+    }
+
+    //makes line appear and change color
+    &__link:hover::after {
+        transform: scaleX(1);
+        background-color: $color-cyan;
     }
 }

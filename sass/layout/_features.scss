@@ -8,6 +8,18 @@
     grid-row-gap: 9rem;
     justify-content: center;
     align-items: end;
+
+    @media only screen and (max-width: $bp-900) {
+        grid-column-gap: 5rem;
+        justify-content: space-between;
+    }
+
+    @media only screen and (max-width: $bp-600) {
+        margin-bottom: 15rem;
+        padding: 0 3.5rem;
+        grid-template-columns: minmax(25rem, 45rem);
+        justify-content: center;
+    }
 }
 
 .feature {
@@ -18,6 +30,9 @@
 
     &__icon {
         margin-bottom: 2rem;
+        display: block;
+        height: 8rem;
+        width: auto;
     }
 
     &__heading {

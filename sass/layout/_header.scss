@@ -6,18 +6,37 @@
     background-position: bottom;
     padding-bottom: 20rem;
 
+    @media only screen and (max-width: $bp-600) {
+        background-image: url(../img/bg-curvy-mobile.svg);
+        padding-bottom: 15rem;
+    }
+
     &-nav {
         padding: 5rem;
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-600) {
+            padding: 8%;
+        }
     }
 
     &-nav__logo-link {
         margin-right: auto;
+
+        @media only screen and (max-width: $bp-600) {
+            width: 25%;
+        }
     }
 
     &-nav__logo {
+        display: block;
+        width: 17.6rem;
+        height: auto;
 
+        @media only screen and (max-width: $bp-600) {
+            width: 100%;
+        }
     }
 
     &-nav__link {
@@ -27,12 +46,20 @@
         color: $color-white;
         transition: color .3s;
 
+        @media only screen and (max-width: $bp-600) {
+            font-size: 1.3rem;
+        }
+
         &:hover {
             color: $color-cyan;
         }
 
         &:not(:last-child) {
             margin-right: 4rem;
+
+            @media only screen and (max-width: $bp-600) {
+                margin-right: 3rem;
+            }
         }
     }
 
@@ -42,6 +69,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media only screen and (max-width: $bp-600) {
+            padding: 3.5rem;
+        }
     }
 
     &__illustration {
@@ -49,6 +80,11 @@
         height: auto;
         display: block;
         margin-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-600) {
+            width: 90%;
+            margin-bottom: 5rem;
+        }
     }
 
     &__heading {
@@ -56,46 +92,21 @@
         font-size: 3.5rem;
         width: 50%;
         margin-bottom: 3rem;
+
+        @media only screen and (max-width: $bp-600) {
+            font-size: 3rem;
+            width: 100%;
+        }
     }
 
-    &__text {
+    &__description {
         font-size: 1.7rem;
         width: 50rem;
         margin-bottom: 2rem;
-    }
-}
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-
-    &__link {
-        text-decoration: none;
-        color: $color-blue;
-        position: relative;
-        transition: color .3s;
-    }
-
-    &__link:hover {
-        color: $color-cyan;
-    }
-
-    //hidden line under links
-    &__link::after {
-        content: "";
-        width: 100%;
-        height: 1px;
-        background-color: $color-blue;
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        transform: scaleX(0);
-        transition: all .3s;
-    }
-
-    //makes line appear and change color
-    &__link:hover::after {
-        transform: scaleX(1);
-        background-color: $color-cyan;
+        @media only screen and (max-width: $bp-600) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
     }
 }

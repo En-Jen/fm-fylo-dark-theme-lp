@@ -7,6 +7,11 @@
     justify-content: center;
     align-items: center;
     grid-gap: 4rem;
+
+    @media only screen and (max-width: $bp-600) {
+        grid-template-columns: minmax(min-content, 55rem);
+        padding: 0 5rem 32rem 5rem;
+    }
 }
 
 .testimonial {
@@ -20,6 +25,15 @@
         position: absolute;
         top: -3.5rem;
         left: -1rem;
+        display: block;
+        width: 5.5rem;
+        height: auto;
+
+        @media only screen and (max-width: $bp-600) {
+            top: -2.9rem;
+            left: 1rem;
+            width: 3.5rem;
+        }
     }
 
     &__quote {

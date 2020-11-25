@@ -1,6 +1,6 @@
 # Frontend Mentor - Fylo landing page with dark theme and features grid
 
-### 🗂 Frontend Mentor landing page challenge to practice some layout challenges. Created with SCSS, CSS Grid, Flexbox, & BEM
+🗂 Frontend Mentor landing page challenge to practice some layout challenges. Created with SCSS, CSS Grid, Flexbox, & BEM
 ### Live App: https://fm-fylo-dark-theme-lp.vercel.app/
 ### Solution submission on Frontend Mentor: https://www.frontendmentor.io/solutions/responsive-intro-section-with-hover-effects-css-grid-and-flexbox-vlORKgVPN
 
